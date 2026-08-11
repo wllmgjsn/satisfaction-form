@@ -1,0 +1,17 @@
+@baseUrl = http://localhost:3000
+
+### Login the default admin
+# @name admin
+POST {{baseUrl}}/auths/login
+Content-Type: application/json
+
+{
+    "username":"admin",
+    "password":"admin"
+}
+
+###
+GET {{baseUrl}}/responses
+Authorization: {{admin.response.body.token}}
+
+

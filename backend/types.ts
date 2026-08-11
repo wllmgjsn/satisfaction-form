@@ -46,6 +46,17 @@ interface JwtPayload {
   iat: number; // Issued at time (in seconds since the epoch)
 }
 
+interface FormResponse {
+  id : number,
+  userId : number,
+  responses : string[];
+}
+
+interface NewFormResponse {
+  username : string,
+  responses: string[];
+}
+
 export type {
   Pizza,
   NewPizza,
@@ -57,4 +68,6 @@ export type {
   PotentialUser,
   AuthenticatedRequest,
   JwtPayload,
+  FormResponse,
+  NewFormResponse
 };
